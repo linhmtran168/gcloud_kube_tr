@@ -1,10 +1,10 @@
 resource "google_container_cluster" "main" {
-  name = "${var.project}-cluster"
+  name     = "${var.project}-cluster"
   location = var.region
 
 
   remove_default_node_pool = true
-  initial_node_count = 1
+  initial_node_count       = 1
 
   master_auth {
     username = ""
@@ -19,7 +19,7 @@ resource "google_container_node_pool" "main" {
   node_count = 1
 
   management {
-    auto_repair = true
+    auto_repair  = true
     auto_upgrade = true
   }
 
