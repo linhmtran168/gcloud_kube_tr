@@ -6,6 +6,6 @@ output "cluster_name" {
   value = google_container_cluster.main.name
 }
 
-output "load_balancer_ip" {
-  value = kubernetes_service.example_service.load_balancer_ingress.0.ip
+output "ingress_ip" {
+  value = kubernetes_ingress.example_ingress.load_balancer_ingress.0.ip
 }
