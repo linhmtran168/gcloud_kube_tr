@@ -13,7 +13,7 @@ resource "google_container_cluster" "main" {
 }
 
 resource "google_container_node_pool" "main" {
-  name       = "${var.project}-main"
+  name       = "${var.project}-pool"
   location   = var.region
   cluster    = google_container_cluster.main.name
   node_count = 1
